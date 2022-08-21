@@ -1,0 +1,23 @@
+{
+  "name": "nodeproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Najim473/Nodejs-Project-2022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Najim473/Nodejs-Project-2022/issues"
+  },
+  "homepage": "https://github.com/Najim473/Nodejs-Project-2022#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
