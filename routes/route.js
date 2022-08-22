@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bookRouter = require('./book');
 router.get("/", (req, res) => {
     // myEvent.emit("test-event", { name: 'Najim Uddin' });
     res.send('Hello World');
@@ -25,6 +26,7 @@ router.post("/", (req, res) => {
     // myEvent.emit("test-event", { name: 'Najim Uddin' });
     res.json({ data: "Hello World from post method" });
 });
+router.use(bookRouter);
 router.all("/*", (req, res) => {
     res.send("Page Not Found");
 })
