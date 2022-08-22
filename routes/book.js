@@ -1,11 +1,12 @@
 const express = require("express");
 const bookRouter = express.Router();
-bookRouter.route("/book").get((req, res) => {
-    res.send("All Books");
+const path = require('path');
+bookRouter.route("/").get((req, res) => {
+    res.sendFile(path.join(__dirname, '../page/book.html'));
 }).post((req, res) => {
     res.json({ data: "Book is stored" });
 })
-bookRouter.get("/book/:id", (req, res) => {
+bookRouter.get("/:id", (req, res) => {
     res.send(`Single Books ${req.params.id}`)
 })
 module.exports = bookRouter;
