@@ -6,12 +6,10 @@
 //     console.log("This event is listening");
 // })
 const express = require('express')
+const routes = require("./routes/route");
 const app = express();
+app.use(routes);
 const PORT = 5000;
-app.get("/", (req, res) => {
-    // myEvent.emit("test-event", { name: 'Najim Uddin' });
-    res.send('Hello World');
-})
 app.listen(PORT, () => {
     console.log(`server is running at http://localhost:${PORT}`);
 })
