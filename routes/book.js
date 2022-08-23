@@ -6,7 +6,14 @@ bookRouter.route("/").get((req, res) => {
 }).post((req, res) => {
     res.json({ data: "Book is stored" });
 })
-bookRouter.get("/:id", (req, res) => {
-    res.send(`Single Books ${req.params.id}`)
-})
+bookRouter.route("/:id")
+    .get((req, res) => {
+        res.send(`Single Books ${req.params.id}`)
+    })
+    .patch((req, res) => {
+        res.send(`Single Books ${req.params.id} to update`)
+    })
+    .delete((req, res) => {
+        res.send(`Single Books ${req.params.id} to delete`)
+    })
 module.exports = bookRouter;

@@ -4,9 +4,8 @@ const bookRouter = require('./book');
 const path = require("path");
 router.get("/", (req, res) => {
     // myEvent.emit("test-event", { name: 'Najim Uddin' });
-    res.sendFile(path.join(__dirname, '../page/home.html'));
+    res.render("index", { name: "Sajjad" });
 });
-
 // router.route("/book").get((req, res) => {
 //     res.send("All Books");
 // }).post((req, res) => {

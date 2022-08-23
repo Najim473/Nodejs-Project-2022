@@ -8,6 +8,7 @@
 const express = require('express')
 const routes = require("./routes/route");
 const app = express();
+app.set("view engine", "pug");
 app.use(routes);
 const PORT = 5000;
 app.listen(PORT, () => {
